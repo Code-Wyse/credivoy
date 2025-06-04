@@ -1,66 +1,176 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🌍 Credivoy – Tourism Marketplace (Laravel)
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**Credivoy** is a feature-rich tourism marketplace platform developed in Laravel. It allows tour companies, hotel managers, and transport providers to list their services, while users can explore, book, and earn rewards (Trip Coins). It also features membership tiers, travel partner matching, and a robust review system.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🛠️ Tech Stack
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- **Framework:** Laravel 10.x
+- **Language:** PHP 8.x
+- **Frontend:** Blade, Bootstrap 5 / Tailwind CSS, Vue.js (if used)
+- **Database:** MySQL
+- **Authentication:** Laravel Breeze / Jetstream / Sanctum (as applicable)
+- **Payment Integration:** Stripe, PayPal (or custom gateways)
+- **APIs:** RESTful API for bookings (if implemented)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 📦 Key Features
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- 🧳 **Trips, Hotels & Transport Listings**
+- ⭐ **User Reviews & Rankings**
+- 💰 **Trip Coins Rewards System**
+- 👥 **Membership Tiers (Silver, Gold, Platinum)**
+- 🧭 **Travel Partner Matchmaking**
+- 🛒 **Marketplace Booking System**
+- 🔐 Secure User Authentication (Companies & Travelers)
+- 📊 Admin Panel to Manage Listings, Reviews, Users
+- 📨 Booking Confirmations via Email
+- 📱 Fully Responsive UI
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## ⚙️ Installation Guide
 
-## Laravel Sponsors
+### 1. Clone the Repository
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+```bash
+git clone https://github.com/yourusername/credivoy.git
+cd credivoy
+````
 
-### Premium Partners
+### 2. Install Dependencies
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+```bash
+composer install
+npm install && npm run dev
+```
 
-## Contributing
+### 3. Configure Environment
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```bash
+cp .env.example .env
+php artisan key:generate
+```
 
-## Code of Conduct
+Update `.env` with database, mail, and payment settings:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```env
+APP_NAME=Credivoy
+APP_URL=http://localhost
 
-## Security Vulnerabilities
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=credivoy_db
+DB_USERNAME=root
+DB_PASSWORD=secret
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=your_username
+MAIL_PASSWORD=your_password
+MAIL_ENCRYPTION=tls
 
-## License
+STRIPE_KEY=your_stripe_key
+STRIPE_SECRET=your_stripe_secret
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 4. Run Migrations and Seeders
+
+```bash
+php artisan migrate --seed
+```
+
+### 5. Serve the Application
+
+```bash
+php artisan serve
+```
+
+Visit [http://localhost:8000](http://localhost:8000)
+
+---
+
+## 📂 Project Structure Overview
+
+```
+/app
+    /Models
+    /Http/Controllers
+/resources
+    /views
+    /js
+    /css
+/routes
+    web.php
+    api.php
+/database
+    /migrations
+/public
+.env
+artisan
+```
+
+---
+
+## 🧪 Testing
+
+Run Laravel test suite:
+
+```bash
+php artisan test
+```
+
+Or with PHPUnit directly:
+
+```bash
+vendor/bin/phpunit
+```
+
+---
+
+## 🛫 Deployment Tips
+
+* Run `npm run build` or `npm run prod`
+* Set `APP_ENV=production`
+* Use `php artisan config:cache` for performance
+* Use HTTPS and secure headers (via Laravel middleware)
+
+---
+
+## 📈 Roadmap (Planned Features)
+
+* Mobile App Integration (Flutter or React Native)
+* AI-based Travel Partner Matching
+* Coupon & Promo Code System
+* Multi-language & Multi-currency Support
+* Affiliate Program for Referrals
+
+---
+
+## 🤝 Contributors
+
+Developed by the **Credivoy Team**
+Project Lead: \[Your Name]
+Co-Founders: \[Partner Names]
+
+---
+
+## 📬 Contact
+
+For support, partnership, or demo requests:
+
+📧 [support@credivoy.com](mailto:support@credivoy.com)
+🌐 [www.credivoy.com](https://www.credivoy.com)
+
+---
+
+```
+
+---
+
+Let me know if you want to include screenshots, API docs, ER diagrams, or instructions for Docker or server deployment (e.g., cPanel, DigitalOcean, or Laravel Forge).
+```
