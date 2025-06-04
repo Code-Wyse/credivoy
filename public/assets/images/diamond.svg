@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34.2857143px" height="30.1428571px" viewBox="0 0 34.2857143 30.1428571" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic_Diamond_svg</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="40" height="40"></rect>
+    </defs>
+    <g id="svg_explain" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="svg_explain_color" transform="translate(-130, -583)">
+            <g id="ic_Diamond_svg" transform="translate(127, 577)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="rectangle"></g>
+                <g id="marshalling" mask="url(#mask-2)" fill="rgb(172, 180, 191)">
+                    <g transform="translate(3, 6)" id="shape_binding">
+                        <path d="M25.7142857,0 L34.284,7.999 L34.2857143,14 L17.1428571,30.1428571 L0,14 L0.001,7.999 L8.57142857,0 L25.7142857,0 Z M13.7003273,13.3719002 C13.4191498,13.0907227 12.963271,13.0907227 12.682121,13.3719277 L10.8719277,15.182121 C10.5907502,15.4632985 10.5907502,15.9191773 10.8719277,16.2003548 L16.6337402,21.9621674 C16.9149177,22.2433449 17.3707965,22.2433449 17.651974,21.9621674 L18.5570707,21.0570707 L23.2572429,16.3568985 C23.5384204,16.075721 23.5384204,15.6198422 23.2572429,15.3386647 L21.4470496,13.5284714 C21.1658623,13.2473161 20.7099958,13.247309 20.4287998,13.5284554 L17.1425244,16.8145244 Z"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
